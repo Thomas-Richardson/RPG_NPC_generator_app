@@ -6,12 +6,12 @@ st.set_page_config(layout="wide")
 
 # =========== Material ====================================
 
-personality_traits_list = ['Kind', 'rude/Obnoxious','loud','annoyed','arrogant, braggart','overconfident','timid','postitive','Gloomy','anxious','apologetic','pampered','grim',
-                      'people pleaser','unreliable','wise','friendly','stiff, emotionless','ambitious','busy','forceful','curious','logical','vain','hedonistic',
-                      'absent-minded' 'sarcastic','intimidating', 'protective over friends','quick to anger', 'wise cracking','dramatic','slow', 'mysterious', 'reckless',
-                      'liar','organised','disorganised']
+personality_traits_list = ['Kind', 'rude/Obnoxious','loud','annoyed','arrogant, braggart', 'overconfident', 'timid', 'postitive', 'Gloomy', 'anxious', 'apologetic', 'pampered', 
+                           'grim', 'people pleaser', 'unreliable', 'wise','friendly', 'stiff, emotionless','ambitious' ,'busy', 'forceful','curious', 'logical','vain', 'hedonistic',
+                      'absent-minded', 'sarcastic', 'intimidating', 'protective over friends', 'quick to anger', 'wise cracking', 'dramatic','slow', 'mysterious', 'reckless',
+                      'liar', 'organised', 'disorganised']
 
-physical_traits_list = ['attractive','tall','fat','short','thin','muscular','ugly','bulbous nose','thin serpentine lips', 'thick lips','long nose','curly hair', 
+physical_traits_list = ['attractive','tall','fat','short','thin','muscular','ugly','bulbous nose','thin serpentine lips', 'thick lips','long nose','curly hair',
                         'bald','long hair', 'styled hair', 'pale skin','swarthy skin','scar','large eyes','high cheekbones','strong jawline', 'old','young', 'tall forehead',
                         'crooked teeth', 'obvious cybernetic',]
 
@@ -25,11 +25,11 @@ flavour_list = ['laughs a lot','patriotic: homeworld','piercing eyes of unusual 
           'Working for another faction (click button below)', "former slave", "former soldier", "trademark weapon", 
           "proud of their race",'mask', 'Has an alien pet','graceful','highly educated', 'ostentatious','touchy touchy', 'family oriented']
 
-male_names_list = ['Tobias Jann', 'Fafnir Breton', 'Ferris Zechiel', 'Monty Centrich', 'Thane Bucanan','Ivan Ryant','Brom Carthen','Sterling Quintan','Jaeger Wasrous','Gareth Catlow', 
-              'Ursa Simril','Darius Paulsen','Vidar Allen','Derra Vale','Khan Inas','Jame Bibble','Shin Braze']
+male_names_list = ['Tobias Jann', 'Fafnir Breton', 'Ferris Zechiel', 'Monty Centrich', 'Thane Bucanan','Ivan Ryant','Brom Carthen','Sterling Quintan','Jaeger Wasrous','Gareth Catlow',
+                   'Ursa Simril','Darius Paulsen','Vidar Allen','Derra Vale','Khan Inas','Jame Bibble','Shin Braze']
 
-female_names_list = ['Eveyln Wynter','Winona Thoran','Felicia Berrett','Freya Mattix','Trinity Sarrat','Lexi Lockley','Derra Vale','Grona Tillo','Nyree Alorr','Jane Dangir','Zena Cardinal',
-                     'Miley Nafan','Tala Kale','Lora Halcyon','Jameela Brumen','Mira Das','Ayla Tane','Anillia Brando']
+female_names_list = ['Eveyln Wynter','Winona Thoran','Felicia Berrett','Freya Mattix','Trinity Sarrat','Lexi Lockley','Derra Vale','Grona Tillo','Nyree Alorr','Jane Dangir',
+                     'Zena Cardinal', 'Miley Nafan','Tala Kale','Lora Halcyon','Jameela Brumen','Mira Das','Ayla Tane','Anillia Brando']
 
 aliases_list = ['Ace', 'Agony', 'Apex', 'Athena', 'Badger', 'Bingo', 'Black', 'Bolt', 'Brakes','Shatter', 'Carrot', 'Cash', 'Cosmo', 'Dash', 'Devil', 'Dipper', 'Echo',
                 'Eight', 'Elbows', 'Falcon', 'Fireball', 'Flex', 'Game', 'Gargoyle', 'Gear', 'Gonzo', 'Guns', 'Hammer', 'Headhunter', 'Helo', 'Hex', 'Highball',
@@ -40,7 +40,7 @@ aliases_list = ['Ace', 'Agony', 'Apex', 'Athena', 'Badger', 'Bingo', 'Black', 'B
 race_list = ['white','black','east asian','indo asian', 'black-white mixed']
 
 factions_list = ['Guild of Engineers','Church of Stellar Flame','Counters Guild','Starless Veil','51st Legion','House Malklaith','Isotropa Max Secure',
-                'Starsmiths Guild', 'Cult of the Seekers',' Hegemonic News Network', 'Yaru (Makers Guild)', 'Concordiat Knights','Lost Legion', 'Scarlet Wolves', 
+                'Starsmiths Guild', 'Cult of the Seekers',' Hegemonic News Network', 'Yaru (Makers Guild)', 'Concordiat Knights','Lost Legion', 'Scarlet Wolves',
                 'Vorex', 'Ashen Knives', 'Borniko Syndicate', 'Draxler’s Raiders', 'The Maelstrom', 'Echo Wave Riders', 'Janus Syndicate', 'Turner Society', 
                 'Cobalt Syndicate', 'Dyrinek Gang', 'Wreckers', 'Sah’iir', 'Suneaters',' The Agony', 'Ashtari Cult',' Vignerons', 'Ghosts', 'Mendicants', 
                 'Nightspeakers', 'Acolytes of Brashkadesh', 'Conclave 01', 'Vigilance']
