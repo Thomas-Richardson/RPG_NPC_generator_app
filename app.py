@@ -6,44 +6,23 @@ st.set_page_config(layout="wide")
 
 # =========== Material ====================================
 
-personality_traits_list = ['Kind', 'rude/Obnoxious','loud','annoyed','arrogant, braggart', 'overconfident', 'timid', 'postitive', 'Gloomy', 'anxious', 'apologetic', 'pampered', 
-                           'grim', 'people pleaser', 'unreliable', 'wise','friendly', 'stiff, emotionless','ambitious' ,'busy', 'forceful','curious', 'logical','vain', 'hedonistic',
-                      'absent-minded', 'sarcastic', 'intimidating', 'protective over friends', 'quick to anger', 'wise cracking', 'dramatic','slow', 'mysterious', 'reckless',
-                      'liar', 'organised', 'disorganised']
+personality_traits_list = ['Kind', 'rude/Obnoxious','loud','annoyed','arrogant, braggart', 'overconfident', 'timid', 'postitive', 'Gloomy', 'anxious', 'apologetic', 'pampered','grim', 'people pleaser', 'unreliable', 'wise','friendly', 'stiff, emotionless','ambitious' ,'busy', 'forceful','curious', 'logical','vain', 'hedonistic', 'absent-minded', 'sarcastic', 'intimidating', 'protective over friends', 'quick to anger', 'wise cracking', 'dramatic','slow', 'mysterious', 'reckless', 'liar', 'organised', 'disorganised']
 
-physical_traits_list = ['attractive','tall','fat','short','thin','muscular','ugly','bulbous nose','thin serpentine lips', 'thick lips','long nose','curly hair',
-                        'bald','long hair', 'styled hair', 'pale skin','swarthy skin','scar','large eyes','high cheekbones','strong jawline', 'old','young', 'tall forehead',
-                        'crooked teeth', 'obvious cybernetic',]
+physical_traits_list = ['attractive','tall','fat','short','thin','muscular','ugly','bulbous nose','thin serpentine lips', 'thick lips','long nose','curly hair','bald','long hair', 'styled hair', 'pale skin','swarthy skin','scar','large eyes','high cheekbones','strong jawline', 'old','young', 'tall forehead','crooked teeth', 'obvious cybernetic',]
 
-clothing_list = ['tattoos','make up','cultural dress','rings','piercings','necklace','punk clothing','suit','armour','torn clothing','fashionable clothing',
-                 'colourful clothing', 'moustache','beard', 'Long coat','Hood or veil','Short cloak','Leathers','']
+clothing_list = ['tattoos','make up','cultural dress','rings','piercings','necklace','punk clothing','suit','armour','torn clothing','fashionable clothing', 'colourful clothing', 'moustache','beard', 'Long coat','Hood or veil','Short cloak','Leathers','']
 
-flavour_list = ['laughs a lot','patriotic: homeworld','piercing eyes of unusual colour',
-          'double down on one physical trait','double down one personality trait','double down one clothing trait',
-          'cultural dress','hair dyed a strange colour', 'androgenous', 'blind','wheelchair', 'glowing'
-          'missing limb, eye or ear', 'urbot', 'religious','anarchist', 'Yaru Clone','secretly rich',
-          'Working for another faction (click button below)', "former slave", "former soldier", "trademark weapon", 
-          "proud of their race",'mask', 'Has an alien pet','graceful','highly educated', 'ostentatious','touchy touchy', 'family oriented']
+flavour_list = ['laughs a lot','patriotic: homeworld','piercing eyes of unusual colour', 'double down on one physical trait','double down one personality trait','double down one clothing trait', 'cultural dress','hair dyed a strange colour', 'androgenous', 'blind','wheelchair', 'glowing', 'missing limb, eye or ear', 'urbot', 'religious','anarchist', 'Yaru Clone','secretly rich', 'Working for another faction (click button below)', "former slave", "former soldier", "trademark weapon", "proud of their race",'mask', 'Has an alien pet','graceful','highly educated', 'ostentatious','touchy touchy', 'family oriented']
 
-male_names_list = ['Tobias Jann', 'Fafnir Breton', 'Ferris Zechiel', 'Monty Centrich', 'Thane Bucanan','Ivan Ryant','Brom Carthen','Sterling Quintan','Jaeger Wasrous','Gareth Catlow',
-                   'Ursa Simril','Darius Paulsen','Vidar Allen','Derra Vale','Khan Inas','Jame Bibble','Shin Braze']
+male_names_list = ['Tobias Jann', 'Fafnir Breton', 'Ferris Zechiel', 'Monty Centrich', 'Thane Bucanan','Ivan Ryant','Brom Carthen','Sterling Quintan','Jaeger Wasrous','Gareth Catlow', 'Ursa Simril','Darius Paulsen','Vidar Allen','Derra Vale','Khan Inas','Jame Bibble','Shin Braze']
 
-female_names_list = ['Eveyln Wynter','Winona Thoran','Felicia Berrett','Freya Mattix','Trinity Sarrat','Lexi Lockley','Derra Vale','Grona Tillo','Nyree Alorr','Jane Dangir',
-                     'Zena Cardinal', 'Miley Nafan','Tala Kale','Lora Halcyon','Jameela Brumen','Mira Das','Ayla Tane','Anillia Brando']
+female_names_list = ['Eveyln Wynter','Winona Thoran','Felicia Berrett','Freya Mattix','Trinity Sarrat','Lexi Lockley','Derra Vale','Grona Tillo','Nyree Alorr','Jane Dangir', 'Zena Cardinal', 'Miley Nafan','Tala Kale','Lora Halcyon','Jameela Brumen','Mira Das','Ayla Tane','Anillia Brando']
 
-aliases_list = ['Ace', 'Agony', 'Apex', 'Athena', 'Badger', 'Bingo', 'Black', 'Bolt', 'Brakes','Shatter', 'Carrot', 'Cash', 'Cosmo', 'Dash', 'Devil', 'Dipper', 'Echo',
-                'Eight', 'Elbows', 'Falcon', 'Fireball', 'Flex', 'Game', 'Gargoyle', 'Gear', 'Gonzo', 'Guns', 'Hammer', 'Headhunter', 'Helo', 'Hex', 'Highball',
-                'Hyper', 'Intake', 'Iris', 'Iron', 'Juggler', 'Juice', 'Junior', 'Karma', 'Lasher', 'Legend', 'Link', 'Loco', 'Mooch', 'Nails', 'Nemesis', 'Nova',
-                'Owl', 'Phoenix', 'Quirk', 'Raider', 'Razor', 'Rash', 'Skulls', 'Snaps', 'Snitch', 'Stinger', 'Syndrome', 'Tank', 'Tax', 'Titan', 'Tread', 'Under',
-                'Vandal', 'Vapor', 'Wraith', 'X-Ray', 'Yellow', 'Zen', 'Zenith', 'Zipper']
+aliases_list = ['Ace', 'Agony', 'Apex', 'Athena', 'Badger', 'Bingo', 'Black', 'Bolt', 'Brakes','Shatter', 'Carrot', 'Cash', 'Cosmo', 'Dash', 'Devil', 'Dipper', 'Echo','Eight', 'Elbows', 'Falcon', 'Fireball', 'Flex', 'Game', 'Gargoyle', 'Gear', 'Gonzo', 'Guns', 'Hammer', 'Headhunter', 'Helo', 'Hex', 'Highball', 'Hyper', 'Intake', 'Iris', 'Iron', 'Juggler', 'Juice', 'Junior', 'Karma', 'Lasher', 'Legend', 'Link', 'Loco', 'Mooch', 'Nails', 'Nemesis', 'Nova', 'Owl', 'Phoenix', 'Quirk', 'Raider', 'Razor', 'Rash', 'Skulls', 'Snaps', 'Snitch', 'Stinger', 'Syndrome', 'Tank', 'Tax', 'Titan', 'Tread', 'Under', 'Vandal', 'Vapor', 'Wraith', 'X-Ray', 'Yellow', 'Zen', 'Zenith', 'Zipper']
 
 race_list = ['white','black','east asian','indo asian', 'black-white mixed']
 
-factions_list = ['Guild of Engineers','Church of Stellar Flame','Counters Guild','Starless Veil','51st Legion','House Malklaith','Isotropa Max Secure',
-                'Starsmiths Guild', 'Cult of the Seekers',' Hegemonic News Network', 'Yaru (Makers Guild)', 'Concordiat Knights','Lost Legion', 'Scarlet Wolves',
-                'Vorex', 'Ashen Knives', 'Borniko Syndicate', 'Draxler’s Raiders', 'The Maelstrom', 'Echo Wave Riders', 'Janus Syndicate', 'Turner Society', 
-                'Cobalt Syndicate', 'Dyrinek Gang', 'Wreckers', 'Sah’iir', 'Suneaters',' The Agony', 'Ashtari Cult',' Vignerons', 'Ghosts', 'Mendicants', 
-                'Nightspeakers', 'Acolytes of Brashkadesh', 'Conclave 01', 'Vigilance']
+factions_list = ['Guild of Engineers','Church of Stellar Flame','Counters Guild','Starless Veil','51st Legion','House Malklaith','Isotropa Max Secure', 'Starsmiths Guild', 'Cult of the Seekers',' Hegemonic News Network', 'Yaru (Makers Guild)', 'Concordiat Knights','Lost Legion', 'Scarlet Wolves', 'Vorex', 'Ashen Knives', 'Borniko Syndicate', 'Draxler’s Raiders', 'The Maelstrom', 'Echo Wave Riders', 'Janus Syndicate', 'Turner Society', 'Cobalt Syndicate', 'Dyrinek Gang', 'Wreckers', 'Sah’iir', 'Suneaters',' The Agony', 'Ashtari Cult',' Vignerons', 'Ghosts', 'Mendicants', 'Nightspeakers', 'Acolytes of Brashkadesh', 'Conclave 01', 'Vigilance']
 
 # =========== Functions ====================================
 
