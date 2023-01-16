@@ -54,15 +54,15 @@ def generate_extra_flavour():
     return new_flavour
 
 # Import the data
-personality_traits_list = import_data('personalities.txt')
-physical_traits_list = import_data('physical_traits.txt')
-clothing_list = import_data('clothing.txt')
-flavours_list = import_data('flavours.txt')
-male_names_list = import_data('male_names.txt')
-female_names_list = import_data('female_names.txt')
-aliases_list = import_data('aliases.txt')
-races_list = import_data('races.txt')
-factions_list = import_data('factions.txt')
+personality_traits_list = import_data('data_files/personalities.txt')
+physical_traits_list = import_data('data_files/physical_traits.txt')
+clothing_list = import_data('data_files/clothing.txt')
+flavours_list = import_data('data_files/flavours.txt')
+male_names_list = import_data('data files/male_names.txt')
+female_names_list = import_data('data_files/female_names.txt')
+aliases_list = import_data('data_files/aliases.txt')
+races_list = import_data('data_files/races.txt')
+factions_list = import_data('data_files/factions.txt')
 # ========== APP =============================
 
 "# Scum and Villainy NPC creator"
