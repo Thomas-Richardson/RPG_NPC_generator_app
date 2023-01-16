@@ -34,12 +34,12 @@ def generate_NPC():
     ALIAS: {alias}.\n
     PHYSICAL APPEARANCE: {[physical_appearance,sex, race]}.\n
     CLOTHING: {clothing}.\n
-    PERSONALITY: {personality}. \n
-    FLAVOUR: {flavour}. \n
-    OCCUPATION: . \n
+    PERSONALITY: {personality}.\n
+    FLAVOUR: {flavour}.\n
+    OCCUPATION: .\n
     GOALS: .\n
     FACTION: .\n
-    RESOURCES: . \n
+    RESOURCES: .\n
     NOTES FROM PLAYER INTERACTIONS: .\n
     CREATED DATE: {dt.datetime.now().strftime("%Y-%m-%d %H:%M")}. \n
     """
@@ -97,10 +97,11 @@ if generate_faction_button:
 export_character_button = st.button('Export')
 
 if export_character_button:
-    filepath = 'ENTER FILEPATH HERE'
+    filepath = 'FILEPATH HERE'
     filename = "S&V_generated_NPCs.md"
     "Saving NPC"
     NPC_to_export = st.session_state['character_description']
+    NPC_to_export = NPC_to_export.replace('.\n','.')
     
     with open((filepath+filename),'a') as f: # Append the NPC to the file 
         f.write("## <NAME> ") # Add a markdown header
