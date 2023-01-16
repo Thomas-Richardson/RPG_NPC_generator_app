@@ -58,7 +58,7 @@ personality_traits_list = import_data('data_files/personalities.txt')
 physical_traits_list = import_data('data_files/physical_traits.txt')
 clothing_list = import_data('data_files/clothing.txt')
 flavours_list = import_data('data_files/flavours.txt')
-male_names_list = import_data('data files/male_names.txt')
+male_names_list = import_data('data_files/male_names.txt')
 female_names_list = import_data('data_files/female_names.txt')
 aliases_list = import_data('data_files/aliases.txt')
 races_list = import_data('data_files/races.txt')
@@ -100,6 +100,8 @@ if export_character_button:
     filepath = 'ENTER FILEPATH HERE'
     filename = "S&V_generated_NPCs.md"
     "Saving NPC"
+    NPC_to_export = st.session_state['character_description']
+    
     with open((filepath+filename),'a') as f: # Append the NPC to the file 
         f.write("## <NAME> ") # Add a markdown header
-        f.write(st.session_state['character_description']) # add the character
+        f.write(NPC_to_export) # add the character
