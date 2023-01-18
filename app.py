@@ -1,5 +1,4 @@
 import streamlit as st
-import pandas as pd
 import random as rd
 import datetime as dt
 st.set_page_config(layout="wide")
@@ -97,7 +96,7 @@ if generate_faction_button:
 export_character_button = st.button('Export')
 
 if export_character_button:
-    filepath = 'FILEPATH HERE'
+    filepath = ''
     filename = "S&V_generated_NPCs.md"
     "Saving NPC"
     NPC_to_export = st.session_state['character_description']
