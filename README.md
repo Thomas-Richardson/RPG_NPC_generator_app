@@ -7,6 +7,28 @@ I have come up with custom lists of personality traits, physical traits, clothin
 
 It also has an export to markdown function that I use to write NPCs to a markdown file in my personal note system. If the players like a character and I sense they'll make a reappeance, the export button appends them to a file of NPCs in my notes. I can then 
 
-NOTE! This will not work for you unless you set the filepath to export to.
-
 If you think this is cool and want help using it for your games, or have improvements, let me know!
+
+## How to use this app for your own roleplay games
+
+- Download and unzip the folder, or `clone` the repo
+
+- If you're on Windows, install python if you haven't already: https://www.python.org/downloads/
+
+- open a command prompt if on windows, or a terminal on Mac (if you've never done this, don't be scared!) and type `pip install streamlit` to install streamlit, which is the python software package to build and run apps
+
+- inside the terminal/command prompt (henceforth, terminal), use the `cd` command to navigate to inside the `RPG_NPC_GENERATOR_APP` folder (you may have to look this up)
+
+- once inside, type into the terminal: `streamlit run app.py`
+
+- The web app will open in a browser window and is ready to use! Note even though it opens in a browser, it doesn't use the internet and will work offline.
+
+- Play around!
+
+- To stop the app, close the browser window **but also go back to the terminal, click on the terminal and press control + C. it will say "Stoppping"**
+
+### Changing the personalities, physical traits and flavours etc.
+
+- Simply go into the `RPG_NPC_GENERATOR_APP` folder, go into the data_files folder and find the relevant .txt file. 
+
+- Change the file to remove things you don't want, or add things you do want. **Crucially, different items should only have a space between them, not commas. Also, if your item has multiple words, they should have dashes between them. e.g. "hard-working"**.
