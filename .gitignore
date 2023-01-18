@@ -21,3 +21,4 @@ venv.bak/
 filepath.txt
 archive.py
 *.mov
+*.json
