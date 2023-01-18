@@ -15,15 +15,17 @@ If you think this is cool and want help using it for your games, or have improve
 
 - If you're on Windows, install python if you haven't already: https://www.python.org/downloads/
 
-- open a command prompt if on windows, or a terminal on Mac (if you've never done this, don't be scared!) and type `pip install streamlit` to install streamlit, which is the python software package to build and run apps
+- Open a command prompt if on windows, or a terminal on Mac (if you've never done this, don't be scared!) and type `pip install streamlit` to install streamlit, which is the python software package to build and run apps
 
-- inside the terminal/command prompt (henceforth, terminal), use the `cd` command to navigate to inside the `RPG_NPC_GENERATOR_APP` folder (you may have to look this up)
+- Inside the terminal/command prompt (henceforth, terminal), use the `cd` command to navigate to inside the `RPG_NPC_GENERATOR_APP` folder (you may have to look this up)
 
-- once inside, type into the terminal: `streamlit run app.py`
+- Once inside, type into the terminal: `streamlit run app.py`
 
 - The web app will open in a browser window and is ready to use! Note even though it opens in a browser, it doesn't use the internet and will work offline.
 
 - Play around!
+
+- If you export a character it will be exported to a file called "S&V_generated_NPCs.md" in the same folder as the app. If you want it somewhere else, you can add a filepath on line 100 of `app.py`
 
 - To stop the app, close the browser window **but also go back to the terminal, click on the terminal and press control + C. it will say "Stoppping"**
 
