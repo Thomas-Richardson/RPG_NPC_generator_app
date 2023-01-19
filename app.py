@@ -1,11 +1,15 @@
 import streamlit as st
 import random as rd
 import datetime as dt
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 st.set_page_config(layout="wide")
 
 # =========== Functions ====================================
 
-@st.cache
+@st.cache # don't re-import data every time the app re-runs
 def import_data(data_file_name):
     with open(data_file_name, "r") as file:
         data = file.readlines()
@@ -96,9 +100,16 @@ if generate_faction_button:
 export_character_button = st.button('Export')
 
 if export_character_button:
-    filepath = ''
+    
+    export_location = os.getenv("EXPORT_LOCATION")
+    
+    if export_location is not None: #if 
+        filepath = export_location
+    else:
+        filepath = ''
+    
     filename = "S&V_generated_NPCs.md"
-    "Saving NPC"
+    f"Saving NPC to {filepath+filename}"
     NPC_to_export = st.session_state['character_description']
     NPC_to_export = NPC_to_export.replace('.\n','.')
     

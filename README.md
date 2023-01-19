@@ -15,7 +15,7 @@ If you think this is cool and want help using it for your games, or have improve
 
 - If you're on Windows, install python if you haven't already: https://www.python.org/downloads/
 
-- Open a command prompt if on windows, or a terminal on Mac (if you've never done this, don't be scared!) and type `pip install streamlit` to install streamlit, which is the python software package to build and run apps
+- Open a command prompt if on windows, or a terminal on Mac (if you've never done this, don't be scared!) and type `pip install streamlit` to install streamlit, which is the python software package to build and run apps. then install `dotenv` by typing `pip install python-dotenv` which allows you to specify where to save your NPCs to. 
 
 - Inside the terminal/command prompt (henceforth, terminal), use the `cd` command to navigate to inside the `RPG_NPC_GENERATOR_APP` folder (you may have to look this up)
 
@@ -25,7 +25,9 @@ If you think this is cool and want help using it for your games, or have improve
 
 - Play around!
 
-- If you export a character it will be exported to a file called "S&V_generated_NPCs.md" in the same folder as the app. If you want it somewhere else, you can add a filepath on line 100 of `app.py`
+- If you export a character it will be exported to a file called "S&V_generated_NPCs.md" in the same folder as the app. 
+
+- If you want it somewhere else, create a file called `.env` and put inside it `EXPORT_LOCATION='filepath'` but replace filepath with the actual file path to where you want it saved. then re-run the app.
 
 - To stop the app, close the browser window **but also go back to the terminal, click on the terminal and press control + C. it will say "Stoppping"**
 
