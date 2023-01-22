@@ -20,6 +20,5 @@ venv.bak/
 .DS_Store
 filepath.txt
 archive.py
-*.mov
 *.json
 scribble.ipynb
