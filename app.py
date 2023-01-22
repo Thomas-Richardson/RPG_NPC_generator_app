@@ -97,22 +97,10 @@ if generate_faction_button:
     st.session_state['generated_faction']
 
 # Exporting 
-export_character_button = st.button('Export')
-
-if export_character_button:
-    
-    export_location = os.getenv("EXPORT_LOCATION")
-    
-    if export_location is not None: #if 
-        filepath = export_location
-    else:
-        filepath = ''
-    
-    filename = "S&V_generated_NPCs.md"
-    f"Saving NPC to {filepath+filename}"
+if 'character_description' in st.session_state:
     NPC_to_export = st.session_state['character_description']
     NPC_to_export = NPC_to_export.replace('.\n','.')
-    
-    with open((filepath+filename),'a') as f: # Append the NPC to the file 
-        f.write("## <NAME> ") # Add a markdown header
-        f.write(NPC_to_export) # add the character
+
+    export_character_button = st.download_button(label = 'Download',
+                                                data = NPC_to_export, 
+                                                file_name = 'character.txt')
