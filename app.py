@@ -60,6 +60,10 @@ def generate_colour():
     colour = rd.sample(colours_list,1)
     return colour
 
+def select_location():
+    location = rd.sample(locations_list,1)
+    return location
+
 # Import the data
 personality_traits_list = import_data('data_files/personalities.txt')
 physical_traits_list = import_data('data_files/physical_traits.txt')
@@ -71,6 +75,8 @@ aliases_list = import_data('data_files/aliases.txt')
 races_list = import_data('data_files/races.txt')
 factions_list = import_data('data_files/factions.txt')
 colours_list = import_data('data_files/colours.txt')
+locations_list = import_data('data_files/locations.txt')
+
 # ========== APP =============================
 
 "# Scum and Villainy NPC creator"
@@ -85,31 +91,41 @@ if create_character_button:
 if 'character_description' in st.session_state:
     st.markdown(st.session_state['character_description']) # basically, if you generated an NPC, print that NPC
 
-col1, col2, col3 = st.columns(3)
+col1a, col2a = st.columns(2)
+col1b, col2b = st.columns(2)
+
 
 # Button for giving you a random extra flavour
-generate_flavour_button = col1.button("Give me an extra flavour")
+generate_flavour_button = col1a.button("Give me an extra flavour")
 
 if generate_flavour_button:
     new_flavour = generate_extra_flavour()
     st.session_state['generated_flavour'] = new_flavour[0]
-    col1.write(st.session_state['generated_flavour'])
+    col1a.write(st.session_state['generated_flavour'])
      
 # Button for giving you a random faction
-generate_faction_button = col2.button("Give me a random faction")
+generate_faction_button = col2a.button("Give me a random faction")
 
 if generate_faction_button:
     faction = select_faction()
     st.session_state['generated_faction'] = faction[0]
-    col2.write(st.session_state['generated_faction'])
+    col2a.write(st.session_state['generated_faction'])
 
 # Button for giving you a random colour
-generate_colour_button = col3.button("Need a random colour for clothes skin, hair etc?")
+generate_colour_button = col1b.button("Need a random colour for clothes skin, hair etc?")
 
 if generate_colour_button:
     colour = generate_colour()
     st.session_state['generated_colour'] = colour[0]
-    col3.write(st.session_state['generated_colour'])
+    col1b.write(st.session_state['generated_colour'])
+    
+# Button for giving you a random location
+generate_location_button = col2b.button("Sample random sub-system")
+
+if generate_location_button:
+    location = select_location()
+    st.session_state['generated_location'] = location[0]
+    col2b.write(st.session_state['generated_location'])
 
 # Exporting 
 if 'character_description' in st.session_state:
