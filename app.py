@@ -56,6 +56,10 @@ def generate_extra_flavour():
     new_flavour = rd.sample(flavours_list,1)
     return new_flavour
 
+def generate_colour():
+    colour = rd.sample(colours_list,1)
+    return colour
+
 # Import the data
 personality_traits_list = import_data('data_files/personalities.txt')
 physical_traits_list = import_data('data_files/physical_traits.txt')
@@ -66,6 +70,7 @@ female_names_list = import_data('data_files/female_names.txt')
 aliases_list = import_data('data_files/aliases.txt')
 races_list = import_data('data_files/races.txt')
 factions_list = import_data('data_files/factions.txt')
+colours_list = import_data('data_files/colours.txt')
 # ========== APP =============================
 
 "# Scum and Villainy NPC creator"
@@ -80,21 +85,31 @@ if create_character_button:
 if 'character_description' in st.session_state:
     st.markdown(st.session_state['character_description']) # basically, if you generated an NPC, print that NPC
 
+col1, col2, col3 = st.columns(3)
+
 # Button for giving you a random extra flavour
-generate_flavour_button = st.button("Give me an extra flavour")
+generate_flavour_button = col1.button("Give me an extra flavour")
 
 if generate_flavour_button:
     new_flavour = generate_extra_flavour()
     st.session_state['generated_flavour'] = new_flavour[0]
-    st.session_state['generated_flavour']
+    col1.write(st.session_state['generated_flavour'])
      
 # Button for giving you a random faction
-generate_faction_button = st.button("Give me a random faction")
+generate_faction_button = col2.button("Give me a random faction")
 
 if generate_faction_button:
     faction = select_faction()
     st.session_state['generated_faction'] = faction[0]
-    st.session_state['generated_faction']
+    col2.write(st.session_state['generated_faction'])
+
+# Button for giving you a random colour
+generate_colour_button = col3.button("Need a random colour for clothes skin, hair etc?")
+
+if generate_colour_button:
+    colour = generate_colour()
+    st.session_state['generated_colour'] = colour[0]
+    col3.write(st.session_state['generated_colour'])
 
 # Exporting 
 export_character_button = st.button('Export')
