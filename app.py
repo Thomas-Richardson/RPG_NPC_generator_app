@@ -32,7 +32,8 @@ def generate_NPC():
     personality = rd.sample(personality_traits_list,2)
     flavour = rd.sample(flavours_list,1)[0]
     
-    description  = f"""\n
+    description  = f"""
+    \n
     NAME OPTIONS: {names}.\n
     ALIAS: {alias}.\n
     PHYSICAL APPEARANCE: {[physical_appearance,sex, race]}.\n
@@ -41,10 +42,9 @@ def generate_NPC():
     FLAVOUR: {flavour}.\n
     OCCUPATION: .\n
     GOALS: .\n
-    FACTION: .\n
     RESOURCES: .\n
     NOTES FROM PLAYER INTERACTIONS: .\n
-    CREATED DATE: {dt.datetime.now().strftime("%Y-%m-%d %H:%M")}. \n
+    CREATED DATE: {dt.datetime.now().strftime("%Y-%m-%d %H:%M")}.\n
     """
     return description
 
@@ -89,43 +89,46 @@ if create_character_button:
 
 # This is so the description you generate doesn't disappear if you click other buttons
 if 'character_description' in st.session_state:
-    st.markdown(st.session_state['character_description']) # basically, if you generated an NPC, print that NPC
+    st.write(st.session_state['character_description']) # basically, if you generated an NPC, print that NPC
 
 col1a, col2a = st.columns(2)
 col1b, col2b = st.columns(2)
 
-
 # Button for giving you a random extra flavour
-generate_flavour_button = col1a.button("Give me an extra flavour")
+generate_flavour_button = col1a.checkbox("Give me an extra flavour")
 
 if generate_flavour_button:
     new_flavour = generate_extra_flavour()
     st.session_state['generated_flavour'] = new_flavour[0]
     col1a.write(st.session_state['generated_flavour'])
+    st.session_state['character_description'] += f'''EXTRA FLAVOUR: {st.session_state['generated_flavour']}. \n'''
      
 # Button for giving you a random faction
-generate_faction_button = col2a.button("Give me a random faction")
+generate_faction_button = col2a.checkbox("Give me a random faction")
 
 if generate_faction_button:
     faction = select_faction()
     st.session_state['generated_faction'] = faction[0]
     col2a.write(st.session_state['generated_faction'])
+    st.session_state['character_description'] += f'''FACTION: {st.session_state['generated_faction']}. \n'''
 
 # Button for giving you a random colour
-generate_colour_button = col1b.button("Need a random colour for clothes skin, hair etc?")
+generate_colour_button = col1b.checkbox("Need a random colour for clothes skin, hair etc?")
 
 if generate_colour_button:
     colour = generate_colour()
     st.session_state['generated_colour'] = colour[0]
     col1b.write(st.session_state['generated_colour'])
+    st.session_state['character_description'] += f'''GENERATED COLOUR: {st.session_state['generated_colour']}. \n'''
     
 # Button for giving you a random location
-generate_location_button = col2b.button("Sample random sub-system")
+generate_location_button = col2b.checkbox("Sample random sub-system")
 
 if generate_location_button:
     location = select_location()
     st.session_state['generated_location'] = location[0]
     col2b.write(st.session_state['generated_location'])
+    st.session_state['character_description'] += f'''LOCATION: {st.session_state['generated_location']}. \n'''
 
 # Exporting 
 export_character_button = st.button('Export')
